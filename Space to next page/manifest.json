@@ -1,0 +1,33 @@
+{
+	"manifest_version": 2, 
+	"name": "space to next page", 
+	"version": "1.1", 
+	
+	"icons": {
+		"128": "enabled_icon.png"
+	},
+	"description": "Go to next page by pressing space key on keyboard.", 
+
+	"browser_action": {
+		"default_title": "Space to next"
+	}, 
+	
+	"background": {
+		"scripts": ["background.js"], 
+		"presistent": false
+	}, 
+	
+	"content_scripts": [
+	{
+		"matches": [ "<all_urls>" ],
+        "js": ["contentScript.js"]
+   }
+ ],
+ 
+	"permissions": [
+		"storage"
+	], 
+	
+	"version_name": "1.0 beta"
+
+}
